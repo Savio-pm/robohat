@@ -231,8 +231,7 @@ class NaCPG(nn.Module):
         if safe_params.numel() != self.num_of_parameters:
             msg = "Parameter vector has incorrect size. "
             msg += (
-                f"Expected {self.num_of_parameters}, got {
-                    safe_params.numel()}."
+                f"Expected {self.num_of_parameters}, got {safe_params.numel()}."
             )
             raise ValueError(msg)
 
