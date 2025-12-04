@@ -30,7 +30,7 @@ try:
     from robohatlib.hal.datastructure.ExpanderStatus import ExpanderStatus
     from robohatlib.driver_ll.datastructs.IOStatus import IOStatus
 
-    from robot_config import GuitarConfig
+    from testlib import GuitarConfig
 
 except ImportError:
     print("Failed to import all dependencies for SerTestClass")
