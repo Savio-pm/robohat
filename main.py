@@ -5,9 +5,9 @@ Electronica-Beta-VU
 A. Denker (a.denker@vu.nl)
 
 """
+from __future__ import absolute_import, division, print_function, unicode_literals
 import math
 import threading
-from __future__ import absolute_import, division, print_function, unicode_literals
 from rpc.controller.na_cpg import NaCPG, create_fully_connected_adjacency
 
 try:
