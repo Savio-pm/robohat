@@ -469,6 +469,7 @@ class Robohat:
         sleep(2)
 
         voltage_max = self.get_servo_adc_multiple_channels()
+        print(f"maximum voltage:{voltage_max}")
         sleep(0.1)
 
         for servo_nr in range(0, len(pre_angles)):
