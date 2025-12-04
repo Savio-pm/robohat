@@ -282,8 +282,8 @@ class NaCPG(nn.Module):
         param = self.parameter_groups[group_name]
         if safe_params.numel() != param.numel():
             msg = (
-                f"Parameter vector has incorrect size for group '{
-                    group_name}'."
+                f"""Parameter vector has incorrect size for group '{
+                    group_name}'."""
             )
             raise ValueError(
                 msg,
