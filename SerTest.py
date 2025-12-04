@@ -20,7 +20,8 @@ try:
     from robohatlib.hal.datastructure.ExpanderStatus import ExpanderStatus
     from robohatlib.driver_ll.datastructs.IOStatus import IOStatus
 
-    from testlib import TestConfig
+    from robot_config import GuitarConfig as TestConfig
+
 
     import sys
     import os
