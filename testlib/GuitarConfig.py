@@ -67,7 +67,7 @@ SERVOBOARD_1_DATAS_LIST = [
         2500,
         0,
         180,
-        5,
+        -5,
         INITIAL_VOLT_TO_ANGLE_FORMULA_A,
         INITIAL_VOLT_TO_ANGLE_FORMULA_B,
     ),
