@@ -360,6 +360,9 @@ class SerTestClass:
                     self.__robohat.set_servo_multiple_angles(
                     frame
                     )
+            print("moved a whole cycle")
+            
+            print(f"used buffer:{buffered}")
 
 def main():
     """!
