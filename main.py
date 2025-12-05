@@ -121,7 +121,7 @@ class SerTestClass:
         print("6 - move servos to " + str(self.__limit_max) + " °")
         print("v - show voltages of all servo adcs")
         print("t - toggle SERVO update mode between DIRECT or PERIODICALLY")
-        print("walk - to start walking")
+        print("w - to start walking")
         print("s - stop walking")
  
 
@@ -353,7 +353,8 @@ class SerTestClass:
                 angles_radians = self.controller.forward(1.0).tolist()
                 
                 angles_degrees = [int((angle + math.pi) / (2 * math.pi) * 180) for angle in angles_radians]
-            
+                if angles_degrees[1] >= 120:
+                    angles_degrees[1] = 120
                 angles_degrees.extend(extender)
                 
             buffered.append(angles_degrees)
@@ -365,6 +366,7 @@ class SerTestClass:
                     self.__robohat.set_servo_multiple_angles(
                     frame
                     )
+                    time.sleep(0.05)
             print("moved a whole cycle")
             
             print(f"used buffer:{buffered}")
