@@ -351,8 +351,12 @@ class SerTestClass:
         for _ in range(total_frames):
             for _ in range(delta_frame):
                 angles_radians = self.controller.forward(1.0).tolist()
+                
                 angles_degrees = [int((angle + math.pi) / (2 * math.pi) * 180) for angle in angles_radians]
-            buffered.append(angles_degrees.extend(extender))
+            
+                angles_degrees.extend(extender)
+                
+            buffered.append(angles_degrees)
         # time_to_servo = self.__robohat.get_servo_us_time(_degree[0])
         print("walk started")
         while self.walking == True:
